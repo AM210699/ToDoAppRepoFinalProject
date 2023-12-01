@@ -66,7 +66,7 @@ body::before {
     border-color: #f44236;
 }
 
-.add-button, .delete-button, .update-button {
+.add-button, .delete-button, .update-button, .completed-button {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
@@ -82,13 +82,17 @@ body::before {
 }
 
 .delete-button {
-    background-color: #EF5350
-    ;
+    background-color: #EF5350;
     color: #fff;
 }
 
 .update-button {
     background-color: #FDD835; /* Cambiado a azul oscuro */
+    color: #fff;
+}
+
+.completed-button {
+    background-color: #1E88E5; /* Cambiado a azul oscuro */
     color: #fff;
 }
 
@@ -101,8 +105,11 @@ body::before {
 }
 
 .update-button:hover {
-    background-color: #F9A825
-    ;
+    background-color: #F9A825;
+}
+
+.completed-button:hover {
+    background-color: #1565C0;
 }
 
 /* Efecto al pasar el ratón sobre los botones
