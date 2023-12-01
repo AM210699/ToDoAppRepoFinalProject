@@ -1,13 +1,25 @@
+#app {
+    width: 80%; /* Ajusta el ancho según tus preferencias */
+    max-width: 600px; /* Establece un ancho máximo para mantenerlo legible */
+    margin: 0 auto; /* Margen automático en los lados para centrar horizontalmente */
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #f8f8f8;
+    font-family: 'Georgia', serif; /* Otra vez, puedes cambiar la fuente según tus preferencias */
+    background-color: #f3f3f3;
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/5278b973057517.5bfd226687bb7.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
+
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden; /* Para evitar barras de desplazamiento */
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
@@ -19,6 +31,7 @@ body {
     max-width: 600px; /* Tamaño máximo del contenedor */
     position: relative;
     z-index: 1; /* Para estar sobre el fondo animado */
+    margin: 0 auto; /* Centrar horizontalmente */
 }
 
 /* Fondo animado de nubes */
@@ -30,7 +43,6 @@ body::before {
     width: 100%;
     height: 100%;
     z-index: 0;
-    background: url('https://media.tenor.com/438H6u87JfsAAAAC/sky-clouds.gif') repeat;
     opacity: 0.5; /* Ajusta la opacidad según tus preferencias */
     pointer-events: none; /* Evitar eventos en el fondo animado */
 }
@@ -65,21 +77,69 @@ body::before {
 }
 
 .add-button {
-    background-color: #ff6f61;
+    background-color: #4CAF50;
     color: #fff;
 }
 
 .delete-button {
-    background-color: #e65254;
+    background-color: #EF5350
+    ;
     color: #fff;
 }
 
 .update-button {
-    background-color: #1976D2; /* Cambiado a azul oscuro */
+    background-color: #FDD835; /* Cambiado a azul oscuro */
     color: #fff;
 }
 
-.add-button:hover, .delete-button:hover, .update-button:hover {
-    background-color: #d32f2f;
+.add-button:hover {
+    background-color: #388E3C;
 }
 
+.delete-button:hover {
+    background-color: #E53935;
+}
+
+.update-button:hover {
+    background-color: #F9A825
+    ;
+}
+
+/* Efecto al pasar el ratón sobre los botones
+.add-button:hover, .delete-button:hover, .update-button:hover {
+    filter: brightness(1.2);
+} */
+
+/* Estilos adicionales para una apariencia más atractiva */
+
+.add-button::before {
+    content: '\002B'; /* Símbolo de suma para el botón de agregar */
+}
+
+.update-button::before {
+    content: '\2713'; /* Símbolo de marca de verificación */
+    margin-right: 5px;
+}
+
+
+
+.delete-button::before {
+    content: '\2716'; /* Símbolo de multiplicación (X) para representar eliminar */
+    margin-right: 5px;
+}
+
+/* Estilos específicos para el botón de actualizar */
+.update-button {
+    font-weight: bold;
+}
+
+/* Estilos para los botones en modo oscuro */
+.mode-nocturno .add-button, .mode-nocturno .delete-button, .mode-nocturno .update-button {
+    color: #000;
+    background-color: #ddd;
+}
+
+/* Efecto al pasar el ratón sobre los botones en modo oscuro */
+.mode-nocturno .add-button:hover, .mode-nocturno .delete-button:hover, .mode-nocturno .update-button:hover {
+    filter: brightness(0.8);
+}

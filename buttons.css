@@ -1,0 +1,51 @@
+/* buttons.css */
+
+
+#light-mode-button {
+    position: fixed;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    right: 200px; /* Ajusta la distancia desde la derecha */
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+#dark-mode-button {
+    position: fixed;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    right: 10px; /* Ajusta la distancia desde la derecha */
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#dark-mode-button {
+    background-color: #333;
+    color: #fff;
+}
+
+#light-mode-button {
+    background-color: #fff;
+    color: #333;
+}
+
+#dark-mode-button::before {
+    content: '\2601';
+    margin-right: 5px;
+}
+
+#light-mode-button::before {
+    content: '\1F31E';
+    margin-right: 5px;
+}
+
+#dark-mode-button:hover, #light-mode-button:hover {
+    opacity: 0.8;
+}
