@@ -19,4 +19,4 @@ Background Image Change: When moving between bright and dark modes, the app's ba
 
 The app has a responsive design that adjusts to multiple screen sizes for a seamless user experience.
 
-Overall, your to-do list app offers a user-friendly layout for managing chores, as well as additional customization via light and dark modes. Users may arrange their duties efficiently, update information, and enjoy a visually pleasing design.
+Overall, the to-do list app offers a user-friendly layout for managing chores, as well as additional customization via light and dark modes. Users may arrange their duties efficiently, update information, and enjoy a visually pleasing design.
