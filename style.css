@@ -1,0 +1,85 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Para evitar barras de desplazamiento */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 40px; /* Aumentar el espacio interno */
+    max-width: 600px; /* Tamaño máximo del contenedor */
+    position: relative;
+    z-index: 1; /* Para estar sobre el fondo animado */
+}
+
+/* Fondo animado de nubes */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: url('https://media.tenor.com/438H6u87JfsAAAAC/sky-clouds.gif') repeat;
+    opacity: 0.5; /* Ajusta la opacidad según tus preferencias */
+    pointer-events: none; /* Evitar eventos en el fondo animado */
+}
+
+.title {
+    color: #ff6f61;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.todo-input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 70%;
+    border: 2px solid #ff6f61;
+    border-radius: 5px;
+    outline: none;
+}
+
+.todo-input:focus {
+    border-color: #f44236;
+}
+
+.add-button, .delete-button, .update-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px 10px 5px; /* Añadir un margen inferior al botón de agregar */
+    transition: background-color 0.3s ease;
+}
+
+.add-button {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+.delete-button {
+    background-color: #e65254;
+    color: #fff;
+}
+
+.update-button {
+    background-color: #1976D2; /* Cambiado a azul oscuro */
+    color: #fff;
+}
+
+.add-button:hover, .delete-button:hover, .update-button:hover {
+    background-color: #d32f2f;
+}
+
